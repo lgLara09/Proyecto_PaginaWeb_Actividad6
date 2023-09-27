@@ -1,0 +1,274 @@
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'calibri';
+  align-items: center;
+  justify-content: center;
+}
+
+header {
+  width: 100%;
+  clear: both;
+  content:'';
+  display: table;
+}
+.container{
+  container: center;
+}
+
+.contenido{
+  float: left;
+  text-align: justify;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #333;
+}
+@media only screen and (max-width: 480px) {
+  img {
+    width: 100%;
+  }
+}
+img {
+  width: 100px;
+  height: 50px;
+  float: center;
+  padding: 8px;
+  opacity: 50;
+
+}
+
+
+.menu {
+  width: 900px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 979px) {
+  .nav {
+    display: block;
+  }
+}
+
+nav {
+  float: center;
+}
+
+nav ul li {
+  list-style: none;
+  margin-left: 75px;
+  padding: 12px 0;
+  float: left;
+  position: relative;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #d3cdcdcb;
+  font-weight: bold;
+}
+
+nav ul li a::before {
+  display: none;
+  content: '';
+  width: 0%;
+  background: #4e3008;
+  height: 5px;
+  top:0;
+  position: absolute;
+  transition: width 0.2s;
+}
+
+nav ul li a:hover::before {
+  width: 100%;
+}
+.menu-log{
+  float: right;
+}
+
+
+#btn-menu{
+  display: none;
+  margin-right: 5px;
+}
+.container-menu{
+  position: absolute;
+  background: rgba(17, 17, 17, 0.5);
+  width: 100%;
+  height: 100vh;
+  top: 0;left: 0;
+  transition: all 500ms ease;
+  opacity: 0;
+  visibility: hidden;
+}
+#btn-menu:checked ~ .container-menu{
+  opacity: 1;
+  visibility: visible;
+}
+.cont-menu{
+  width: 100%;
+  max-width: 250px;
+  background: #4c4b4b;
+  height: 100vh;
+  position: relative;
+  transition: all 500ms ease;
+  transform: translateX(-100%);
+}
+#btn-menu:checked ~ .container-menu .cont-menu{
+  transform: translateX(0%);
+}
+.cont-menu nav{
+  transform: translateY(10%);
+}
+.cont-menu nav a{
+  display: block;
+  text-decoration: none;
+  padding: 20px;
+  color: #c7c7c7;
+  border-left: 5px solid transparent;
+  transition: all 400ms ease;
+}
+.cont-menu nav a:hover{
+  border-left: 5px solid #c7c7c7;
+  background: #472f01;
+}
+.cont-menu label{
+  position: absolute;
+  right: 5px;
+  top: 10px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+
+
+.container {
+  position: relative;
+  max-width: 700px;
+  width: 100%;
+  background: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  margin-top: 15px;
+}
+.container header {
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: 500;
+  text-align: center;
+}
+.container .form {
+  margin-top: 30px;
+}
+.form .input-box {
+  width: 100%;
+  margin-top: 20px;
+}
+.input-box label {
+  color: #333;
+}
+.form :where(.input-box input, .select-box) {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+  color: #707070;
+  margin-top: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0 15px;
+}
+.input-box input:focus {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+.form .column {
+  display: flex;
+  column-gap: 15px;
+}
+.form .gender-box {
+  margin-top: 20px;
+}
+.gender-box h3 {
+  color: #333;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+.form :where(.gender-option, .gender) {
+  display: flex;
+  align-items: center;
+  column-gap: 50px;
+  flex-wrap: wrap;
+}
+.form .gender {
+  column-gap: 5px;
+}
+.gender input {
+  accent-color: rgb(130, 106, 251);
+}
+.form :where(.gender input, .gender label) {
+  cursor: pointer;
+}
+.gender label {
+  color: #707070;
+}
+.address :where(input, .select-box) {
+  margin-top: 15px;
+}
+.select-box select {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  color: #707070;
+  font-size: 1rem;
+}
+.form button {
+  height: 55px;
+  width: 100%;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 30px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: rgb(130, 106, 251);
+}
+.form button:hover {
+  background: rgb(88, 56, 250);
+}
+/*Responsive*/
+@media screen and (max-width: 767px) {
+  .footer-cool{
+    width: 50%;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 574px) {
+  .footer-cool{
+    width: 100%;
+  }
+  }
+@media screen and (max-width: 500px) {
+  .form .column {
+    flex-wrap: wrap;
+  }
+  .form :where(.gender-option, .gender) {
+    row-gap: 15px;
+  }
+}
+footer{
+  padding: 10px;
+  text-align: center;
+  color: white;
+  position: unset;
+}
